@@ -21,11 +21,11 @@ Vous devez recoder les fonctions suivantes. Ces fonctions ne nécessitent aucune
 <strike>• strrchr</strike>  
 <strike>• strncmp</strike>  
 <strike>• strlcpy</strike>  
-• strlcat  
+<strike>• strlcat</strike>  
 • strnstr  
 <strike>• atoi</strike>  
     
 Vous devez également recoder ces fonctions, en faisant appel à la fonction “malloc” :
     
 • calloc  
-• strdup  
+<strike>• strdup</strike>  
