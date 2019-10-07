@@ -20,7 +20,7 @@ Vous devez recoder les fonctions suivantes. Ces fonctions ne nécessitent aucune
 <strike>• strchr</strike>  
 <strike>• strrchr</strike>  
 <strike>• strncmp</strike>  
-• strlcpy  
+<strike>• strlcpy</strike>  
 • strlcat  
 • strnstr  
 <strike>• atoi</strike>  
