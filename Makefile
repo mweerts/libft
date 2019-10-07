@@ -6,7 +6,7 @@
 #    By: mweerts <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 20:17:58 by mweerts           #+#    #+#              #
-#    Updated: 2019/10/07 22:26:25 by mweerts          ###   ########.fr        #
+#    Updated: 2019/10/07 23:45:28 by mweerts          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRCS =	ft_memset.c\
 		ft_strrchr.c\
 		ft_strncmp.c\
 		ft_strlcpy.c\
+		ft_strlcat.c\
 		ft_atoi.c
 
 HEADERS = libft.h
