@@ -19,7 +19,7 @@ Vous devez recoder les fonctions suivantes. Ces fonctions ne nécessitent aucune
 <strike>• tolower</strike>  
 <strike>• strchr</strike>  
 <strike>• strrchr</strike>  
-• strncmp  
+<strike>• strncmp</strike>  
 • strlcpy  
 • strlcat  
 • strnstr  
