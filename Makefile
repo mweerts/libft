@@ -6,13 +6,14 @@
 #    By: mweerts <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 20:17:58 by mweerts           #+#    #+#              #
-#    Updated: 2019/10/08 16:08:48 by mweerts          ###   ########.fr        #
+#    Updated: 2019/10/08 17:47:48 by mweerts          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 SRCS =	ft_memset.c\
 		ft_bzero.c\
+		ft_memcpy.c\
 		ft_strlen.c\
 		ft_isalpha.c\
 		ft_isdigit.c\
