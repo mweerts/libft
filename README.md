@@ -22,7 +22,7 @@ Vous devez recoder les fonctions suivantes. Ces fonctions ne nécessitent aucune
 <strike>• strncmp</strike>  
 <strike>• strlcpy</strike>  
 <strike>• strlcat</strike>  
-• strnstr  
+<strike>• strnstr</strike>  
 <strike>• atoi</strike>  
     
 Vous devez également recoder ces fonctions, en faisant appel à la fonction “malloc” :
