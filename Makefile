@@ -6,7 +6,7 @@
 #    By: mweerts <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 20:17:58 by mweerts           #+#    #+#              #
-#    Updated: 2019/10/08 18:02:03 by mweerts          ###   ########.fr        #
+#    Updated: 2019/10/09 20:32:30 by mweerts          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,8 @@ SRCS =	ft_memset.c\
 		ft_strdup.c\
 		ft_putchar_fd.c\
 		ft_putstr_fd.c\
-		ft_putendl_fd.c
+		ft_putendl_fd.c\
+		ft_putnbr_fd.c
 
 HEADERS = libft.h
 OBJS= $(SRCS:.c=.o) 
