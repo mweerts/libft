@@ -6,7 +6,7 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:46:55 by mweerts           #+#    #+#             */
-/*   Updated: 2019/10/07 22:15:58 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/10/09 21:04:33 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ int	ft_atoi(const char *str)
 		is_neg = 1;
 		i++;
 	}
+	else if (str[i] == '+')
+		i++;
 	while (str[i] && str[i] >= '0' && str[i] <= '9')
 	{
 		nbr = nbr * 10 + (str[i] - 48);
