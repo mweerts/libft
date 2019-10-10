@@ -6,7 +6,7 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 20:31:57 by mweerts           #+#    #+#             */
-/*   Updated: 2019/10/10 16:48:48 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/10/10 21:31:54 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ char	*ft_strdup(const char *s);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_itoa(int n);
+char	*ft_strmapi(char *s, void (*f)(unsigned int, char));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
