@@ -6,7 +6,7 @@
 #    By: mweerts <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 20:17:58 by mweerts           #+#    #+#              #
-#    Updated: 2019/10/14 10:58:12 by mweerts          ###   ########.fr        #
+#    Updated: 2019/10/14 11:24:22 by mweerts          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,7 @@ SRCS =	ft_memset.c\
 		ft_strdup.c\
 		ft_substr.c\
 		ft_strjoin.c\
+		ft_strtrim.c\
 		ft_itoa.c\
 		ft_strmapi.c\
 		ft_putchar_fd.c\

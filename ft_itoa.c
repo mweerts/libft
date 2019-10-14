@@ -6,13 +6,13 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 16:20:23 by mweerts           #+#    #+#             */
-/*   Updated: 2019/10/10 16:48:36 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/10/14 11:03:47 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_intlen(int n)
+static int		ft_intlen(int n)
 {
 	int nb_char;
 
@@ -27,14 +27,14 @@ static int	ft_intlen(int n)
 	return (nb_char);
 }
 
-static int	ft_abs(int n)
+static int		ft_abs(int n)
 {
 	if (n < 0)
 		return (-n);
 	return (n);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char	*str;
 	int		is_neg;
