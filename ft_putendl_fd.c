@@ -6,7 +6,7 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 16:06:42 by mweerts           #+#    #+#             */
-/*   Updated: 2019/10/08 16:16:27 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/10/14 14:16:26 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
+	if (s == NULL)
+		return;
 	ft_putstr_fd(s, fd);
 	ft_putchar_fd('\n', fd);
 }

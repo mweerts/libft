@@ -6,7 +6,7 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 11:08:15 by mweerts           #+#    #+#             */
-/*   Updated: 2019/10/14 11:45:00 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/10/14 15:41:00 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,17 +34,18 @@ char		*ft_strtrim(const char *s1, const char *set)
 	int		k;
 	char	*str;
 
+	if (s1 == NULL)
+		return (NULL);
 	i = 0;
 	j = ft_strlen(s1) - 1;
 	k = 0;
+	length = 0;
 	while (s1[i] && is_set(s1[i], set))
 		i++;
 	while (s1[j] && is_set(s1[j], set))
 		j--;
-	if (j - i < 0)
-		length = 0;
-	else
-		length = j - i;
+	if (j - i >= 0)
+		length = (j - i) + 1;
 	str = malloc(sizeof(char) * (length + 1));
 	if (str == NULL)
 		return (NULL);

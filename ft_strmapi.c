@@ -6,7 +6,7 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 21:26:46 by mweerts           #+#    #+#             */
-/*   Updated: 2019/10/10 21:35:13 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/10/14 15:48:10 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char *s, void (*f)(unsigned int, char))
 	char			*str;
 
 	i = 0;
+	if (s == NULL)
+		return (NULL);
 	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (str == NULL)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 11:48:33 by mweerts           #+#    #+#             */
-/*   Updated: 2019/10/14 12:03:13 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/10/14 14:01:29 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static char	*word(const char *str, char c)
 	return (word);
 }
 
-char	**ft_split(const char *s, char c)
+char		**ft_split(const char *s, char c)
 {
 	char	**tab;
 	int		i;
