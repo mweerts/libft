@@ -6,7 +6,7 @@
 #    By: mweerts <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 20:17:58 by mweerts           #+#    #+#              #
-#    Updated: 2019/10/14 17:47:13 by mweerts          ###   ########.fr        #
+#    Updated: 2019/10/14 22:39:11 by mweerts          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,27 +44,35 @@ SRCS =	ft_memset.c\
 		ft_putchar_fd.c\
 		ft_putstr_fd.c\
 		ft_putendl_fd.c\
-		ft_putnbr_fd.c\
-		ft_lstnew.c\
-		ft_lstadd_front.c\
-		ft_lstsize.c\
-		ft_lstlast.c
+		ft_putnbr_fd.c
+
+SRCS_BONUS =	ft_lstnew.c\
+				ft_lstadd_front.c\
+				ft_lstsize.c\
+				ft_lstlast.c
 
 HEADERS = libft.h
 OBJS= $(SRCS:.c=.o) 
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 FLAGS = -Wall -Wextra -Werror
-
-$(NAME):
-		gcc $(FLAGS) -c $(SRCS)
-		ar rc $(NAME) $(OBJS)
-		ranlib $(NAME)
 
 all: $(NAME)
 
+$(NAME):	$(OBJS)
+			ar rc $(NAME) $(OBJS)
+			ranlib $(NAME)
+
+%.o: %.c
+		gcc $(FLAGS) -c -o $@ $<
+
 clean:
-		rm -rf $(OBJS) 
+		rm -rf $(OBJS) $(OBJS_BONUS) 
 
 fclean: clean
 		rm -rf $(NAME)
 
 re: fclean all
+
+bonus:	$(OBJS) $(OBJS_BONUS)
+		ar rc $(NAME) $(OBJS) $(OBJS_BONUS)
+		ranlib $(NAME)
