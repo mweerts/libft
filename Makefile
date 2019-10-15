@@ -6,7 +6,7 @@
 #    By: mweerts <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 20:17:58 by mweerts           #+#    #+#              #
-#    Updated: 2019/10/14 22:39:11 by mweerts          ###   ########.fr        #
+#    Updated: 2019/10/15 13:26:24 by mweerts          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,9 +49,9 @@ SRCS =	ft_memset.c\
 SRCS_BONUS =	ft_lstnew.c\
 				ft_lstadd_front.c\
 				ft_lstsize.c\
-				ft_lstlast.c
+				ft_lstlast.c\
+				ft_lstadd_back.c
 
-HEADERS = libft.h
 OBJS= $(SRCS:.c=.o) 
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 FLAGS = -Wall -Wextra -Werror

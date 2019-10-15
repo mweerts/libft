@@ -6,11 +6,11 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 16:31:01 by mweerts           #+#    #+#             */
-/*   Updated: 2019/10/14 16:49:26 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/10/15 13:15:31 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {

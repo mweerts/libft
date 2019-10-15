@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "libft.h"
+#include "libft_bonus.h"
 
 int	main()
 {
@@ -16,11 +16,22 @@ int	main()
 	elem3 = ft_lstnew("ccc");
 	elem4 = ft_lstnew("dddd");
 	elem5 = ft_lstnew("eeeee");
-	ft_lstadd_front(&liste, elem5);
+	ft_lstadd_back(&liste, elem5);
+	ft_lstadd_back(&liste, elem4);
+	ft_lstadd_back(&liste, elem3);
+	ft_lstadd_back(&liste, elem2);
+	ft_lstadd_back(&liste, elem1);
+
+	/*ft_lstadd_front(&liste, elem5);
 	ft_lstadd_front(&liste, elem4);
 	ft_lstadd_front(&liste, elem3);
 	ft_lstadd_front(&liste, elem2);
 	ft_lstadd_front(&liste, elem1);
-
-	printf("Last : %s\n", ft_lstlast(liste)->content);
+	*/
+	while (liste)
+	{
+		printf("%s\n", (char*)liste->content);
+		liste = liste->next;
+	}
+	
 }
