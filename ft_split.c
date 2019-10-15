@@ -6,7 +6,7 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 11:48:33 by mweerts           #+#    #+#             */
-/*   Updated: 2019/10/14 14:01:29 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/10/15 16:02:28 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ char		**ft_split(const char *s, char c)
 	int		j;
 
 	tab = malloc(sizeof(char*) * (nbr_mots(s, c) + 1));
+	if (tab == NULL)
+		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[i])
