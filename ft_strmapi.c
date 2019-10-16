@@ -6,19 +6,19 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 21:26:46 by mweerts           #+#    #+#             */
-/*   Updated: 2019/10/14 15:48:10 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/10/17 00:51:48 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char *s, void (*f)(unsigned int, char))
+char	*ft_strmapi(char *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
 	char			*str;
 
 	i = 0;
-	if (s == NULL)
+	if (s == NULL || (*f) == NULL)
 		return (NULL);
 	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (str == NULL)
@@ -26,7 +26,7 @@ char	*ft_strmapi(char *s, void (*f)(unsigned int, char))
 	str = ft_memcpy(str, s, ft_strlen(s));
 	while (str[i])
 	{
-		f(i, str[i]);
+		str[i] = f(i, str[i]);
 		i++;
 	}
 	str[i] = '\0';
