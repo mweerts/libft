@@ -6,7 +6,7 @@
 #    By: mweerts <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 20:17:58 by mweerts           #+#    #+#              #
-#    Updated: 2019/10/22 16:29:58 by mweerts          ###   ########.fr        #
+#    Updated: 2019/10/22 16:31:51 by mweerts          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,7 @@ FLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME):	$(OBJS)
-			ar rc $(NAME) $^
+			ar rc $(NAME) $(OBJS)
 			ranlib $(NAME)
 
 %.o: %.c
@@ -77,5 +77,5 @@ fclean: clean
 re: fclean all
 
 bonus:	$(OBJS) $(OBJS_BONUS)
-		ar rc $(NAME) $^
+		ar rc $(NAME) $(OBJS) $(OBJS_BONUS)
 		ranlib $(NAME)
