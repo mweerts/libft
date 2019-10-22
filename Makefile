@@ -6,7 +6,7 @@
 #    By: mweerts <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 20:17:58 by mweerts           #+#    #+#              #
-#    Updated: 2019/10/22 15:52:23 by mweerts          ###   ########.fr        #
+#    Updated: 2019/10/22 16:23:57 by mweerts          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,5 +77,5 @@ fclean: clean
 re: fclean all
 
 bonus:	$(OBJS) $(OBJS_BONUS)
-		ar rc $(NAME) $(OBJS) $(OBJS_BONUS)
+		ar rc $(NAME) $^
 		ranlib $(NAME)
