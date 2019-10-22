@@ -6,7 +6,7 @@
 #    By: mweerts <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 20:17:58 by mweerts           #+#    #+#              #
-#    Updated: 2019/10/22 16:23:57 by mweerts          ###   ########.fr        #
+#    Updated: 2019/10/22 16:29:58 by mweerts          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,7 @@ FLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME):	$(OBJS)
-			ar rc $(NAME) $(OBJS)
+			ar rc $(NAME) $^
 			ranlib $(NAME)
 
 %.o: %.c
