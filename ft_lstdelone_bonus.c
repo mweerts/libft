@@ -6,7 +6,7 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 21:35:28 by mweerts           #+#    #+#             */
-/*   Updated: 2019/10/22 16:35:02 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/10/22 16:36:21 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ void ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	(*del)(lst);
 	free(lst);
-	lst = NULL;
+	*lst = NULL;
 }
