@@ -6,7 +6,7 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 17:29:46 by mweerts           #+#    #+#             */
-/*   Updated: 2019/10/22 16:26:10 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/10/22 16:27:30 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int		ft_lstsize(t_list *lst)
 	int	i;
 
 	i = 0;
-	while (lst)
+	while (lst != NULL)
 	{
 		lst = lst->next;
 		i++;
