@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include "libft_bonus.h"
-#include <time.h>
+#include <string.h>
 
 int	main()
 {
-	char	*d;
-	int n;
-	srand(clock());
-
-	for (int i = 0; i < 50000000; i++)
-	{
-		n = rand();
-		d = ft_itoa(n);
-		if (atoi(d) != n)
-			printf("%s\n%d\n", d, n);
-	}
+	t_list *l;
+	int actual;
+	int expected;
+	
+	l = ft_lstnew(strdup("1"));
+	l->next = ft_lstnew(strdup("2"));
+	l->next->next = ft_lstnew(strdup("3"));
+	l->next->next->next = ft_lstnew(strdup("4"));
+	expected = 3;
+	actual = ft_lstsize(l);
+	printf("%d\n", actual);
 }

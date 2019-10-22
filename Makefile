@@ -6,7 +6,7 @@
 #    By: mweerts <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 20:17:58 by mweerts           #+#    #+#              #
-#    Updated: 2019/10/20 17:57:47 by mweerts          ###   ########.fr        #
+#    Updated: 2019/10/22 15:52:23 by mweerts          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,8 +53,7 @@ SRCS_BONUS =	ft_lstnew_bonus.c\
 				ft_lstadd_back_bonus.c\
 				ft_lstdelone_bonus.c\
 				ft_lstclear_bonus.c\
-				ft_lstiter_bonus.c\
-				ft_lstmap_bonus.c
+				ft_lstiter_bonus.c
 
 OBJS= $(SRCS:.c=.o) 
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
