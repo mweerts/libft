@@ -6,7 +6,7 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 17:04:54 by mweerts           #+#    #+#             */
-/*   Updated: 2019/10/23 01:19:38 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/10/29 21:08:23 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*ret;
 
-	if (lst == NULL)
+	if (!lst || !(*f) || !(*del))
 		return (NULL);
 	if ((ret = ft_lstnew((*f)(lst))) == NULL)
 		(*del)(ret);

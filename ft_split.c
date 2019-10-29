@@ -6,7 +6,7 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 11:48:33 by mweerts           #+#    #+#             */
-/*   Updated: 2019/10/29 15:00:24 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/10/29 21:31:42 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,9 @@ static char	*word(const char *str, char c)
 	i = 0;
 	while (str[i] && str[i] != c)
 		i++;
-	word = malloc(sizeof(char) * (i + 1));
+	word = (char*)malloc(sizeof(char) * (i + 1));
+	if (word == NULL)
+		return (NULL);
 	i = 0;
 	while (str[i] && str[i] != c)
 	{
@@ -52,6 +54,21 @@ static char	*word(const char *str, char c)
 	return (word);
 }
 
+static void free_mem(char **tab, int index_max)
+{
+	int i;
+
+	i = 0;
+	while(i <= index_max)
+	{
+		free(tab[i]);
+		tab[i] = NULL;
+		i++;
+	}
+	free(tab);
+	tab = NULL;
+}
+
 char		**ft_split(const char *s, char c)
 {
 	char	**tab;
@@ -60,7 +77,7 @@ char		**ft_split(const char *s, char c)
 
 	if (s == NULL)
 		return (NULL);
-	tab = malloc(sizeof(char*) * (nbr_mots(s, c) + 1));
+	tab = (char **)malloc(sizeof(char*) * (nbr_mots(s, c) + 1));
 	if (tab == NULL)
 		return (NULL);
 	i = 0;
@@ -72,6 +89,11 @@ char		**ft_split(const char *s, char c)
 		if (s[i] && s[i] != c)
 		{
 			tab[j] = word(&s[i], c);
+			if (tab[j] == NULL)
+			{
+				free_mem(tab, j);
+				return (NULL);
+			}
 			j++;
 			while (s[i] != '\0' && s[i] != c)
 				i++;
