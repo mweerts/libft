@@ -6,7 +6,7 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 11:08:15 by mweerts           #+#    #+#             */
-/*   Updated: 2019/10/14 15:41:00 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/10/29 19:39:54 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char		*ft_strtrim(const char *s1, const char *set)
 	int		k;
 	char	*str;
 
-	if (s1 == NULL)
+	if (s1 == NULL || set == NULL)
 		return (NULL);
 	i = 0;
 	j = ft_strlen(s1) - 1;
