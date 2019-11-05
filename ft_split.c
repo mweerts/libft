@@ -6,7 +6,7 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 11:48:33 by mweerts           #+#    #+#             */
-/*   Updated: 2019/11/04 18:20:27 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/11/05 15:58:14 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,12 @@ static char	*word(const char *str, char c)
 	return (word);
 }
 
-static void free_mem(char **tab, int index_max)
+static char	**free_mem(char **tab, int index_max)
 {
 	int i;
 
 	i = 0;
-	while(i <= index_max)
+	while (i <= index_max)
 	{
 		free(tab[i]);
 		tab[i] = NULL;
@@ -67,6 +67,7 @@ static void free_mem(char **tab, int index_max)
 	}
 	free(tab);
 	tab = NULL;
+	return (NULL);
 }
 
 char		**ft_split(const char *s, char c)
@@ -88,13 +89,8 @@ char		**ft_split(const char *s, char c)
 			i++;
 		if (s[i] && s[i] != c)
 		{
-			tab[j] = word(&s[i], c);
-			if (tab[j] == NULL)
-			{
-				free_mem(tab, j);
-				return (NULL);
-			}
-			j++;
+			if (!(tab[j++] = word(&s[i], c)))
+				return (free_mem(tab, j));
 			while (s[i] != '\0' && s[i] != c)
 				i++;
 		}
