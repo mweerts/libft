@@ -59,7 +59,7 @@ static char	**free_mem(char **tab, int index_max)
 	int i;
 
 	i = 0;
-	while (i <= index_max)
+	while (i < index_max - 1)
 	{
 		free(tab[i]);
 		tab[i] = NULL;
