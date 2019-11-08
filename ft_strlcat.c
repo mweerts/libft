@@ -14,8 +14,8 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int i;
-	unsigned int j;
+	size_t i;
+	size_t j;
 
 	i = 0;
 	j = 0;
@@ -25,7 +25,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	{
 		dst[i + j] = src[j];
 		j++;
-		size--;
+	i//	size--;
 	}
 	if (size > i)
 		dst[i + j] = '\0';
