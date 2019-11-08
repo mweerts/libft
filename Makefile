@@ -56,11 +56,11 @@ SRCS_BONUS =	ft_lstnew_bonus.c\
 				ft_lstiter_bonus.c\
 				ft_lstmap_bonus.c
 
-OBJS= $(SRCS:.c=.o) 
+OBJS= $(SRCS:.c=.o)
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 FLAGS = -Wall -Wextra -Werror
 
-all: $(NAME)
+all: $(NAME) bonus
 
 $(NAME):	$(OBJS)
 			ar rc $(NAME) $(OBJS)
@@ -70,7 +70,7 @@ $(NAME):	$(OBJS)
 		gcc $(FLAGS) -c -o $@ $<
 
 clean:
-		rm -rf $(OBJS) $(OBJS_BONUS) 
+		rm -rf $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
 		rm -rf $(NAME)
