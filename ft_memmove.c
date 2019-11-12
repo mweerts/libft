@@ -6,7 +6,7 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 23:34:19 by mweerts           #+#    #+#             */
-/*   Updated: 2019/10/10 13:32:07 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/11/12 16:34:23 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	size_t				i;
+	size_t			i;
 	unsigned char	*pdst;
 	unsigned char	*psrc;
 
@@ -35,10 +35,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	else
 	{
 		while (i < n)
-		{
-			pdst[i] = psrc[i];
-			i++;
-		}
+			pdst[i] = psrc[i++];
 	}
 	return (dst);
 }

@@ -6,7 +6,7 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 21:26:46 by mweerts           #+#    #+#             */
-/*   Updated: 2019/10/17 00:55:35 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/11/12 16:33:11 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
 	size_t		i;
-	char			*str;
+	char		*str;
 
 	i = 0;
 	if (s == NULL || (*f) == NULL)

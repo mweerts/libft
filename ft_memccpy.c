@@ -6,7 +6,7 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 17:53:35 by mweerts           #+#    #+#             */
-/*   Updated: 2019/10/14 14:01:46 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/11/12 16:32:02 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	size_t				i;
+	size_t			i;
 	unsigned char	*pdst;
 	unsigned char	*psrc;
 

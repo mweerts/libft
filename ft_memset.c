@@ -6,7 +6,7 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 10:55:07 by mweerts           #+#    #+#             */
-/*   Updated: 2019/10/07 22:17:31 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/11/12 16:32:36 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t	i;
-	char		*str;
+	char	*str;
 
 	i = 0;
 	str = (char*)b;
