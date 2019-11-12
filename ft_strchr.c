@@ -22,10 +22,10 @@ char	*ft_strchr(const char *s, int c)
 	while (str[i])
 	{
 		if (str[i] == c)
-			return (&str[i]);
+			return ((void*)(s + i));
 		i++;
 	}
 	if (str[i] == c)
-		return (&str[i]);
+		return ((void*)(s + i));
 	return (NULL);
 }
