@@ -6,7 +6,7 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 22:39:33 by mweerts           #+#    #+#             */
-/*   Updated: 2019/10/09 22:45:06 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/11/12 16:54:35 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ret;
 
+	if (count == 0 || size == 0)
+		return (NULL);
 	ret = malloc(count * size);
 	if (ret == NULL)
 		return (NULL);
