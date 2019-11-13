@@ -6,7 +6,7 @@
 #    By: mweerts <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/07 20:17:58 by mweerts           #+#    #+#              #
-#    Updated: 2019/10/22 17:09:48 by mweerts          ###   ########.fr        #
+#    Updated: 2019/11/14 00:19:25 by mweerts          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,7 +60,7 @@ OBJS= $(SRCS:.c=.o)
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 FLAGS = -Wall -Wextra -Werror
 
-all: $(NAME) bonus
+all: $(NAME)
 
 $(NAME):	$(OBJS)
 			ar rc $(NAME) $(OBJS)
