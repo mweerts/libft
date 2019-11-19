@@ -6,7 +6,7 @@
 /*   By: mweerts <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/08 15:47:01 by mweerts           #+#    #+#             */
-/*   Updated: 2019/11/12 16:34:33 by mweerts          ###   ########.fr       */
+/*   Updated: 2019/11/19 17:09:59 by mweerts          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	if (!src && !dst)
 		return (0);
-	if (dst == src)
-		return (dst);
 	pdest = (unsigned char *)dst;
 	psrc = (unsigned char *)src;
 	i = 0;
