@@ -32,11 +32,11 @@ int	ft_atoi(const char *str)
 	else if (str[i] == '+')
 		i++;
 	while (str[i] && str[i] >= '0' && str[i] <= '9')
+	{
 		nbr = nbr * 10 + (str[i++] - 48);
-	if (is_neg == 1 && nbr > LONG_MAX)
-		return (-1);
-	if (is_neg == -1 && -nbr < LONG_MIN)
-		return (0);
+		if (nbr > LONG_MAX)
+			return ((is_neg == 1) ? -1 : 0);
+	}
 	nbr *= is_neg;
 	return ((int)nbr);
 }
