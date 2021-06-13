@@ -29,10 +29,12 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 		while (n-- > 0)
 			pdst[n] = psrc[n];
 	else
+	{
 		while (i < n)
 		{
 			pdst[i] = psrc[i];
 			i++;
 		}
+	}
 	return (dst);
 }

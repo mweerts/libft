@@ -26,7 +26,7 @@ static int	is_set(char c, const char *set)
 	return (0);
 }
 
-char		*ft_strtrim(const char *s1, const char *set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
 	int		length;
 	int		i;
